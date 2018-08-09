@@ -322,6 +322,7 @@ This manual shows how to generate data in a file using a C program and importing
 Graphically show that the function
 %
 \begin{equation}
+\label{eq:fx}
 f(x)=
 \begin{cases}
 -x & x < 1 \\
@@ -329,7 +330,7 @@ a + \cos^{-1}\brak{x + b} & 1 \leq x \leq 2
 \end{cases}
 \end{equation}
 %
-is continuous at $x = 1$ for $b = -1, a + b =  - \frac{\pi}{2}$.  
+is continuous at $x = 1$ for $b = -1, a - b =  - \frac{\pi}{2}$.  
 \end{problem}
 \solution
 %\input{./problems/ee16b1005.tex}
@@ -349,6 +350,12 @@ Write a C program to generate an arithmetic progression with first term $a=-1$, 
 \solution
 \lstinputlisting[language=C]{./codes/ap.c}
 \begin{problem}
+Repeat the above exercise by using functions for finding the common difference
+and the $n$term given $a,l$ and $n$.
+\end{problem}
+\solution
+\lstinputlisting[language=C]{./codes/apfunc.c}
+\begin{problem}
 Repeat the above exercise by printing the numbers in a file called test.dat
 \end{problem}
 \solution
@@ -358,7 +365,12 @@ Now run the following program.  Comment.
 \end{problem}
 \lstinputlisting[language=python]{./codes/ee16b1005_dat.py}
 \begin{problem}
-Do all the computations in problem 1 in C and verify your results by plotting in python.
+Compute $f(x)$ in \eqref{eq:fx} through a C program
+\end{problem}
+\solution
+\lstinputlisting[language=C]{./codes/fx.c}
+\begin{problem}
+Do all the computations in Problem 1 in C and verify your results by plotting in python.
 \end{problem}
 
 %\begin{problem}

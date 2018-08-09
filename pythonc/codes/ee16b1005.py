@@ -29,5 +29,5 @@ plt.legend(loc='best',prop={'size':11})
 plt.xlabel('$x$')
 plt.ylabel('$f(x)$')
 #Comment the following line 
-plt.savefig('../figs/ee16b1005.eps')
+#plt.savefig('../figs/ee16b1005.eps')
 plt.show()
