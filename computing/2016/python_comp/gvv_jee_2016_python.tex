@@ -267,15 +267,6 @@ of Electrical Engineering, Indian Institute of Technology, Hyderabad
 This manual is a collection of math problems from the JEE 2016 mains paper, suitably modified as programming problems. These problems are
 solved using Python.  In the process, the student is exposed to various math and plot functions and libraries in Python. 
 \end{abstract}
-\begin{problem}
-For $x \in \mathbf{R}, x \neq 0, x \neq 1$, let $f_0(x) = \frac{1}{1-x}$ 
-and $f_{n+1}(x) = f_0\brak{f_n(x)}, n = 0, 1, \dots $.  Then find the value of
-$f_{100}(3) + f_1\brak{\frac{2}{3}}+f_2\brak{\frac{3}{2}}$.
-\end{problem}
-%
-\solution
-\input{./problems/ee16b1001.tex}
-\lstinputlisting{./codes/ee16b1001.py}
 %
 \begin{problem}
 If $P = 
@@ -646,7 +637,7 @@ The following code  summarises the solution through the plot in Fig. \ref{fig_21
 \end{figure}
 %
 \begin{problem}
-The lines $x-y=1$ and $2x+y=3$ intersect at $O$.  A circle with centre at point $O$ passes through the point $\brak{-1,1}$. Sketch the following lines
+The lines $x-y=1$ and $2x+y=3$ intersect at $O$.  A circle with centre at point $O$ passes through the point $\brak{1,-1}$. Sketch the following lines
 \begin{enumerate}
 \item $4x +y -3 = 0$
 \item $x + 4y+3 = 0$
@@ -658,13 +649,13 @@ Which of these is a tangent to the circle? At what point?
 \solution
 \input{./problems/ee16b1022.tex}
 %
-The following python code plots the circle as well as the various lines  in Fig. \ref{fig_22} and shows that no  line is a tangent to the circle.
+The following python code plots the circle as well as the various lines  in Fig. \ref{fig_22}.
 \lstinputlisting{./codes/ee16b1022.py}
 %
 \begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/ee16b1022}
-\caption{ Since the lines intersect the circle, they are not tangent to it and no point of tangency exists. }
+\caption{ The tangent to the circle at $\brak{1,-1}$ is $x+4y+3=0$. }
 \label{fig_22}	
 \end{figure}
 %
@@ -927,8 +918,65 @@ Fig. \ref{fig_39} plots $A$ with respect to $x$.
 \includegraphics[width=\columnwidth]{./figs/ee16b1039}
 \caption{ Area is minimum for $x = \frac{2}{\pi + 4}$}.
 \label{fig_39}	
-\end{figure}
+\end{figure} 
+\begin{problem}
+For $x \in \mathbf{R}, x \neq 0, x \neq 1$, let $f_0(x) = \frac{1}{1-x}$ 
+and $f_{n+1}(x) = f_0\brak{f_n(x)}, n = 0, 1, \dots $.  Then find the value of
+$f_{100}(3) + f_1\brak{\frac{2}{3}}+f_2\brak{\frac{3}{2}}$.
+\end{problem}
 %
+\solution
+\input{./problems/ee16b1001.tex}
+\lstinputlisting{./codes/ee16b1001.py}
 
+%
+%\begin{problem}
+%Find the locus of the centres of the circles which touch the circle
+%\begin{equation}
+%x^2+y^2-8x-8y-4 = 0
+%\end{equation}
+%externally and also touch the $x$-axis. 
+%\end{problem}
+%\begin{problem}
+%One of the diameters of the circle given by the equation 
+%\begin{equation}
+%x^2+y^2-4x+6y-12 = 0
+%\end{equation}
+%is a chord of the circle $S$, whose centre is at $\brak{-3,2}$.
+%Find the radius of $S$.  
+%\end{problem}
+%\begin{problem}
+%Let $P$ be the point on the parabola $y^2=8x$ which is at a minimum distance from
+%the centre $C$ of the circle $x^2+\brak{y+6}^2 = 1$. Find and sketch the
+%circle passing through $C$ and having its centre at $P$.
+%\end{problem}
+\begin{problem}
+If the mean deviation of the numbers $1,1+d,\dots, 1+100d$ from their mean
+is 255, then a value of $d$
+\begin{enumerate}
+\item 10.1
+\item 20.2
+\item 10
+\item 5.05
+\end{enumerate}
+\end{problem}
+\begin{problem}
+Find the number of $x \in \sbrak{0,2\pi}$  for which
+\begin{equation}
+\abs{2\sin^4 x + 18 \cos ^2 x }-\abs{2\cos^4 x + 18 \sin ^2 x } = 1
+\end{equation}
+\end{problem}
+\begin{problem}
+If $0 \le x \le 2\pi$, find the number of real values of $x$ which satisfy the equation
+\begin{equation}
+\cos x + \cos 2x + \cos 3x + \cos 4x = 0
+\end{equation}
+\end{problem}
+\begin{problem}
+Simplify the Boolean expression
+\begin{equation}
+\brak{p\wedge ~q}c\vee q \vee \brak{~p\wedge q}
+\end{equation}
+\end{problem}
 \end{document}
 

@@ -1,12 +1,3 @@
-#Importing numy, scipy, mpmath and pyplot
-import numpy as np
-import mpmath as mp
-import scipy 
-import scipy.stats as sp
-import matplotlib.pyplot as plt
-import subprocess
-
-
 def recr(n,x):
 	if n%3 == 1:
 		 return 1.0/(1-x);         #f0
