@@ -3,7 +3,7 @@
 #Don't remove the above line
 
 #This program uses a C routine for multiplication and square root
-#in the calculator.  Other arithmetic operations are not included.
+#in the calculator.  Other arithmetic operations are in Python
 
 from Tkinter import *
 from ctypes import *
