@@ -40,7 +40,6 @@
 \usepackage{mathtools}
 \usepackage{iithtlc}
 %\usepackage[framemethod=tikz]{mdframed}
-\usepackage{hyperref}
 \usepackage{listings}
     \usepackage[latin1]{inputenc}                                 %%
     \usepackage{color}                                            %%
@@ -53,8 +52,10 @@
   %optionally (for landscape tables embedded in another document): %%
     \usepackage{lscape}     
 
+\usepackage[breaklinks]{hyperref}
 \usepackage{url}
 \def\UrlBreaks{\do\/\do-}
+\usepackage{breakurl}
 
 
 %\usepackage{stmaryrd}
@@ -320,10 +321,12 @@ beginners can learn how to build some simple software applications with graphica
 \section{Python Calculator}
 \begin{problem}
 \label{prob:calc}
-Download the python code from \href{http://tlc.iith.ac.in/resources/tkcalc.py}{\url{http://tlc.iith.ac.in/resources/tkcalc.py}} and execute it.
+Download the python code from \cite{tkcalc}
+%\href{https://github.com/gadepall/EE1083/blob/master/calculator/codes/solution/pythonprogs/tkcalc.py}{\url{code}} from 
 %\begin{lstlisting}
-%http://tlc.iith.ac.in/resources/tkcalc.py
+%https://github.com/gadepall/EE1083/blob/master/calculator/codes/solution/pythonprogs/tkcalc.py
 %\end{lstlisting}
+and execute it.
 \end{problem}
 
 \section{Shared Libraries in GCC}
@@ -382,10 +385,11 @@ Call the function written above in the Python GUI calculator to perform multipic
 \end{problem}
 
 \solution
-Download \textbf{calc\_mul\_root.py} file from the \href{http://tlc.iith.ac.in/img/LA1400/calc_mul.py}{\url{http://tlc.iith.ac.in/img/LA1400/calc_mul.py}} and save it in directory where \textbf{mul.c} is saved.  Execute  \textbf{calc\_mul.py}.
+Download \textbf{calc\_mul\_root.py} file from the \cite{calc_mul_root} and save it in directory where \textbf{mul.c} is saved.  Execute  \textbf{calc\_mul.py}.
 
 \begin{problem}
-use C routines in \textbf{calc\_mul\_root.py} for all arithmetic operations in the calculator.
+Use C routines in \textbf{calc\_mul\_root.py} for all arithmetic operations in the calculator.
 \end{problem}
+\bibliography{IEEEabrv,hemanth_cpython.bib}
 \end{document}
 
