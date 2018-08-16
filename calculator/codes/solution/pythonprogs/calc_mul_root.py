@@ -2,7 +2,7 @@
 
 #Don't remove the above line
 
-#This program uses a C routine for multiplication
+#This program uses a C routine for multiplication and square root
 #in the calculator.  Other arithmetic operations are not included.
 
 from Tkinter import *
