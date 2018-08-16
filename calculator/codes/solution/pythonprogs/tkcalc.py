@@ -1,4 +1,5 @@
 #-*-coding: utf-8-*-
+#This file is taken from http://www.techinfected.net/2016/02/make-gui-calculator-in-python-windows-linux.html posted by Aman Deep.
 from Tkinter import *
 import math
 
