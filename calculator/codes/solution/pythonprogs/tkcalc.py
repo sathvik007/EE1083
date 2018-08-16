@@ -1,6 +1,12 @@
 #-*-coding: utf-8-*-
 #This file is taken from http://www.techinfected.net/2016/02/make-gui-calculator-in-python-windows-linux.html posted by Aman Deep.
-from Tkinter import *
+try:
+    # for Python2
+    from Tkinter import *   ## notice capitalized T in Tkinter 
+except ImportError:
+    # for Python3
+    from tkinter import *   ## notice lowercase 't' in tkinter here
+#from Tkinter import *
 import math
 
 class calc:
@@ -74,7 +80,8 @@ class calc:
 		self.e.focus_set() #Sets focus on the input text area
 				
 		self.div='÷'
-		self.newdiv=self.div.decode('utf-8')
+		self.newdiv=self.div		#Python 3
+#		self.newdiv=self.div.decode('utf-8') # Python 2
 
 		#Generating Buttons
 		Button(master,text="=",width=10,command=lambda:self.equals()).grid(row=4, column=4,columnspan=2)
