@@ -1,12 +1,20 @@
 #-*-coding: utf-8-*-
-#This file is taken from http://www.techinfected.net/2016/02/make-gui-calculator-in-python-windows-linux.html posted by Aman Deep.
+
+#Don't remove the above line
+
+#This program uses a C routine for multiplication and square root
+#in the calculator.  Other arithmetic operations are in Python
+
 try:
     # for Python2
     from Tkinter import *   ## notice capitalized T in Tkinter 
 except ImportError:
     # for Python3
     from tkinter import *   ## notice lowercase 't' in tkinter here
+
+
 #from Tkinter import *
+from ctypes import *
 import math
 
 class calc:
@@ -21,15 +29,28 @@ class calc:
 		"""when the equal button is pressed"""
 
 		self.getandreplace()
-		try: 
-			self.value= eval(self.newtext) #evaluate the expression using the eval function
+		
+		try:
+			for i in self.newtext:
+				if(i=='*'):
+					multi=CDLL('./mul.so')
+					y=self.newtext.split('*')
+					a=c_float(float(y[0]))
+					b=c_float(float(y[1]))
+					mul=multi.mul
+					mul.restype=c_float
+					self.value=mul(a,b)
+				else:
+					self.value= eval(self.newtext) #evaluate the expression using the eval function
+					
+			
 		except SyntaxError or NameErrror:
 			self.e.delete(0,END)
 			self.e.insert(0,'Invalid Input!')
 		else:
 			self.e.delete(0,END)
 			self.e.insert(0,self.value)
-	
+			
 	def squareroot(self):
 		"""squareroot method"""
 		
@@ -40,7 +61,10 @@ class calc:
 			self.e.delete(0,END)
 			self.e.insert(0,'Invalid Input!')
 		else:
-			self.sqrtval=math.sqrt(self.value)
+			multi=CDLL('./sq_rt.so')
+			sq_rt=multi.sq_rt
+			sq_rt.restype=c_float
+			self.sqrtval=sq_rt(c_float(float(self.value)))
 			self.e.delete(0,END)
 			self.e.insert(0,self.sqrtval)
 
@@ -57,7 +81,8 @@ class calc:
 			self.sqval=math.pow(self.value,2)
 			self.e.delete(0,END)
 			self.e.insert(0,self.sqval)
-	
+			
+			
 	def clearall(self): 
 		"""when clear button is pressed,clears the text input area"""
 		self.e.delete(0,END)
@@ -80,8 +105,7 @@ class calc:
 		self.e.focus_set() #Sets focus on the input text area
 				
 		self.div='÷'
-#		self.newdiv=self.div		#Python 3
-		self.newdiv=self.div.decode('utf-8') # Python 2
+		self.newdiv=self.div		#Python 3
 
 		#Generating Buttons
 		Button(master,text="=",width=10,command=lambda:self.equals()).grid(row=4, column=4,columnspan=2)

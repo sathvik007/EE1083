@@ -80,8 +80,8 @@ class calc:
 		self.e.focus_set() #Sets focus on the input text area
 				
 		self.div='÷'
-#		self.newdiv=self.div		#Python 3
-		self.newdiv=self.div.decode('utf-8') # Python 2
+		self.newdiv=self.div		#Python 3
+#		self.newdiv=self.div.decode('utf-8') # Python 2
 
 		#Generating Buttons
 		Button(master,text="=",width=10,command=lambda:self.equals()).grid(row=4, column=4,columnspan=2)
