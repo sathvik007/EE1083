@@ -24,14 +24,14 @@
 \bibitem{tkcalc}
 \BIBentryALTinterwordspacing
 A.~Deep. (2018) {Python Calculator}. [Online]. Available:
-  \url{https://github.com/gadepall/EE1083/blob/master/calculator/codes/solution/pythonprogs/tkcalc.py}
+  \url{https://github.com/gadepall/EE1083/blob/master/calculator/software/codes/pythonprogs/tkcalc.py}
 \BIBentrySTDinterwordspacing
 
 \bibitem{calc_mul_root}
 \BIBentryALTinterwordspacing
 H.~Kumar. (2018) {Python Calculator using Shared Libraries}. [Online].
   Available:
-  \url{https://github.com/gadepall/EE1083/blob/master/calculator/codes/solution/pythonprogs/calc_mul_root.py}
+  \url{https://github.com/gadepall/EE1083/blob/master/calculator/software/codes/pythonprogs/calc_mul_root.py}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

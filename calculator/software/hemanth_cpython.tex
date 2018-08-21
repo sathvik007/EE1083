@@ -334,7 +334,7 @@ and execute it.
 Write a C function to multiply two given numbers. Save it in the file titled as \textbf{mul.c}
 \end{problem}
 \solution
-\lstinputlisting{./codes/solution/cprogs/mul.c}
+\lstinputlisting{./codes/cprogs/mul.c}
 \begin{problem}
 Open the Terminal and go to the directory where the \textbf{mul.c} file is saved.
 \end{problem}
@@ -345,11 +345,12 @@ Type the following command in the Terminal.
 \begin{lstlisting}
 cc -fPIC -shared -o mul.so mul.c
 \end{lstlisting}
+Note that you will have to use the \textbf{-lm} switch for \textbf{math.h } functions.
 \begin{problem}
 Type the following program in \textbf{main.c}
 \end{problem}
 \solution
-\lstinputlisting{./codes/solution/cprogs/main.c}
+\lstinputlisting{./codes/cprogs/main.c}
 \begin{problem}
 Run the above program
 \end{problem}
@@ -370,7 +371,7 @@ Repeat the above exercises for adding two numbers.
 %%\end{lstlisting}
 %\end{problem}
 \begin{problem}
-Write all the required C routines for the calculator in Problem \ref{prob:calc} and generate the shared libraries.
+Write all the required C routines for the calculator in Problem \ref{prob:calc} and generate the shared libraries. Test all the routines.
 \end{problem}
 
 \section{Shared libraries in Python}
@@ -379,13 +380,13 @@ Write all the required C routines for the calculator in Problem \ref{prob:calc} 
 Write a Python script to multiply two numbers using C function.
 \end{problem}
 \solution
-\lstinputlisting{./codes/solution/pythonprogs/mul.py}
+\lstinputlisting{./codes/pythonprogs/mul.py}
 \begin{problem}
 Call the function written above in the Python GUI calculator to perform multipication.
 \end{problem}
 
 \solution
-Download \textbf{calc\_mul\_root.py} file from the \cite{calc_mul_root} and save it in directory where \textbf{mul.c} is saved.  Execute  \textbf{calc\_mul.py}.
+Download \textbf{calc\_mul\_root.py} file from the \cite{calc_mul_root} and save it in directory where \textbf{mul.c} is saved.  Execute  \textbf{calc\_mul\_root.py}.
 
 \begin{problem}
 Use C routines in \textbf{calc\_mul\_root.py} for all arithmetic operations in the calculator.
