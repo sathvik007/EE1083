@@ -69,39 +69,22 @@
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
-%\lstset{
-%language=C,
-%frame=single, 
-%breaklines=true
-%}
-
-%\lstset{
-	%%basicstyle=\small\ttfamily\bfseries,
-	%%numberstyle=\small\ttfamily,
-	%language=Octave,
-	%backgroundcolor=\color{white},
-	%%frame=single,
-	%%keywordstyle=\bfseries,
-	%%breaklines=true,
-	%%showstringspaces=false,
-	%%xleftmargin=-10mm,
-	%%aboveskip=-1mm,
-	%%belowskip=0mm
-%}
 
 %\surroundwithmdframed[width=\columnwidth]{lstlisting}
 \def\inputGnumericTable{}                                 %%
+
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{cyan}{rgb}{0.0,0.6,0.6}
+ 
 \lstset{
-language=Python,
 frame=single, 
-breaklines=true
+breaklines=true,
+columns=fullflexible
 commentstyle=\color{dkgreen},
 stringstyle=\color{mauve},
-keywordstyle=\color{cyan},}
- 
+keywordstyle=\color{cyan}
+}
 
 \begin{document}
 %
@@ -200,7 +183,7 @@ keywordstyle=\color{cyan},}
 
 \title{ 
 	\logo{
-Databases through Python-Flask and MariaDB
+Calculator using Python-Flask 
 	}
 }
 
@@ -220,8 +203,8 @@ Databases through Python-Flask and MariaDB
 % was not built to handle multiple paragraphs
 %
 
-\author{Tanmay Agarwal, Durga Keerthi and G V V Sharma$^{*}$% <-this % stops a space
-\thanks{Tanmay is an intern with the TLC, IIT Hyderabad.  Durga is a UG student at IIT Hyderabad.  *GVV Sharma is with the Department
+\author{G V V Sharma$^{*}$% <-this % stops a space
+\thanks{*GVV Sharma is with the Department
 of Electrical Engineering, Indian Institute of Technology, Hyderabad
 502285 India e-mail:  gadepall@iith.ac.in. All content in this manual is released under GNU GPL.  Free and open source.}% <-this % stops a space
 %\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
@@ -278,7 +261,8 @@ of Electrical Engineering, Indian Institute of Technology, Hyderabad
 
 \begin{abstract}
 %\boldmath
-Databases software applications for small establishments like schools, shops, etc.. can be easily built using the MariaDB database, Python-Flask connector and HTML.  This manual shows how to install these  free software tools and build a simple application using them.
+This manual shows how to build a calculator using Python-Flask. The user interface is through a browser while 
+the computations are done in Python.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -313,247 +297,35 @@ Databases software applications for small establishments like schools, shops, et
 
 %\newpage
 \section{Python-flask}
-
  Flask is Python framework for creating web applications.
-\subsection{Installation}
-\begin{enumerate}
-\item Run the following commands on the terminal
+
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
+
+\item Installation:
 \begin{lstlisting}
 sudo apt-get update
 sudo apt-get install python-pip
 sudo pip install flask
-sudo pip install mysql-connector
-\end{lstlisting}
-\end{enumerate}
-
-\subsection{Testing Flask}
-Since installation of Flask is now complete, verify that flask is working by using the example below. 
-\begin{enumerate}
- 
-\item \textbf{Code:}
-
-\begin{description}
-\item \lstinputlisting[language=Python]{./codes/hello.py}
-\end{description}
-
-\item Save the file as \textbf{hello.py}.
-
-\item open the terminal and run 
-\begin{lstlisting}
-python hello.py
-\end{lstlisting}
-An ip address will be displayed on the terminal.
-
-\item Open the address on your favourite browser. "Hello world" will be displayed
-\end{enumerate}
-
-
-
-
-
-
-%\input{./figs/components.tex}
-\section{Mariadb }
-MariaDB Server is one of the most popular database servers in the world. The following installation instructions are for Ubuntu.  Installation on other Linux systems are likely to be similar.
-\subsection{\textbf{Software Installation}}
-Refer to Link
-\\
-https://www.liquidweb.com/kb/how-to-install-mariadb-5-5-on-ubuntu-14-04-lts/
-\begin{enumerate}
-
-\item Type the following commands on the terminal
-%Add MariaDB Respository.
-\begin{lstlisting}
-sudo apt-get install software-properties-common
-sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
-sudo add-apt-repository 'deb http://mirror.jmu.edu/pub/mariadb/repo/5.5/ubuntu trusty main'
-sudo apt-get update
-sudo apt-get install mariadb-server
 \end{lstlisting}
 
-%^The software-properties-common package should already be installed, but just in case:
-%
-%Command:- \textbf{sudo apt-get install software-properties-common}
-
-%\item Import the MariaDB public key used by the package management system:
-%
-%command:\textbf{sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db}
-
-%\item Add the MariaDB Repository:
-
-%command: \textbf{sudo add-apt-repository 'deb http://mirror.jmu.edu/pub/mariadb/repo/5.5/ubuntu trusty main'}
-%
-%Now reload the package database.
-
-%command:\textbf{sudo apt-get update}
-%\item Install MariaDB.
-%
-%command: \textbf{sudo apt-get install mariadb-server}
-%
-You may receive the following prompt or something similar:
-
-After this operation, 116 MB of additional disk space will be used.
-Do you want to continue? [Y/n]
-
-Enter Y to continue.
-
-Next you will be asked:
-
-New password for the MariaDB root user:
-
-This is an administrative account in MariaDB with elevated privileges; enter a strong password.
-
-Then you will be asked to verify the root MariaDB password:
-
-Repeat password for the MariaDB root user:
-
-That is it! Your basic MariaDB installation is now complete!
-
-Be sure to stop MariaDB before proceeding to the next step:
-
-\textbf{sudo service mysql stop}
-
-\end{enumerate}
-\subsection{Configuration}
-Configure and Secure MariaDB for Use
-\begin{enumerate}
-\item 
-
-Now we will instruct MariaDB to create its database directory structure:
-\\
-\textbf{sudo mysql\_install\_db}
-
-\item Start MariaDB
-\\
-\textbf{sudo service mysql start}
-
-\item And now let us secure MariaDB by removing the test databases and anonymous user created by default:
-
-\textbf{sudo mysql\_secure\_installation}
-
-\item You will be prompted to enter your current password. Enter the root MariaDB password set during installation:
-\\
-Enter current password for root (enter for none):
-\\
-Then, assuming you set a strong root password, go ahead and enter n at the following prompt:
-\\
-Change the root password? [Y/n] n
-\\
-Remove anonymous users, Y:
-\\
-Remove anonymous users? [Y/n] Y
-\\
-Disallow root logins remotely, Y:
-\\
-Disallow root login remotely? [Y/n] Y
-\\
-Remove test database and access to it, Y:
-\\
-Remove test database and access to it? [Y/n] Y
-\\
-And reload privilege tables, Y:
-\\
-Reload privilege tables now? [Y/n] Y
-
-\item Verify MariaDB Installation
-
- Check Version
-\\
-\textbf{mysql -V}
-\end{enumerate}
-
-\section{Database Application}
-\subsection{Creating a Database}
-%\subsection{Getting Started With MariaDB}
-\begin{enumerate}
-\item 
-%Creating a Databace in Mysql and Mariadb.
-Open the terminal and type
-\begin{lstlisting}
-mysql -u root -p
-\end{lstlisting}
-You will be asked for a password. Enter it.   
-\item Create a database called test using the following command.
-\begin{lstlisting}
-CREATE DATABASE Test;
-\end{lstlisting}
-\item In order to use the Database type
-\begin{lstlisting}
-USE Test;
-\end{lstlisting}
-You will enter into the Database called Test.
-\item Now create a table named test with parameters as Name and Roll Number.
-\begin{lstlisting}
-CREATE TABLE test(name varchar(20) not null,roll varchar(20) not null);
-\end{lstlisting}
-varchar(20) means string of size 20 characters.
-%\item Creating a table in database
-%\\
-%command:\textbf{CREATE TABLE table\_name(name varchar(20) not null, roll varchar(20) not null);}
-%\\
-%Table will be created in Database.
-%
-%varchar = It is data type. You can also use INT,CHAR,DATE etc.
-%\\
-%Note:- The number given along with varchar is the the maximum size a string can have.
-%\\
-%To see the format of the fields in table type:
-%\\
-%\textbf{desc table\_name;}
-%\\
-\item To see the format of the fields in \textbf{test}
-\begin{lstlisting}
-desc test;
-\end{lstlisting}
-%\\
-%command:\textbf{Show tables;}
-\end{enumerate}
-
-
-%Now we will make a simple example in which we will be giving three operation Storing, Displaying and Updating of the data.First we will see each operation one by one then all together.
-
-\subsection{Creating HTML Forms}
-%\subsection{Storing the Data into the Database}
-%\begin{enumerate}
-%\item In order to store the data in Database we first have to create a database.Say let the name of database is Test.Just enter into your mysql by command mention above.
-%
-%\item Creating a Database.
-%command: \textbf{CREATE DATABASE Test;}
-
-%\item Use that Database and 
-%
-%\item Your Database will be created.
-%\item Now we will create the following files.\textbf{student.html,message.html and store.py}.Just open any text editor and type the codes given below.
-%\\
-%Note:- Make a template folder in same place where you are keeping your Python file and keep all the HTML file in it.
 
 %\begin{description}
-\begin{enumerate}
-\item Type the following code in a file called \textbf{student.html} and open it using a browser.  You will see boxes with \textbf{Name, Roll}.  Also, there will be a button called \textbf{submit} and two links titled \textbf{Show List} and \textbf{Update}.  the 
-\lstinputlisting[language=HTML]{./codes/student.html}
+\item {Calculator UI in HTML}:
+Download the following code  and open it using a browser.  You 
+will see the calculator UI.
 
-%Save this file as student.html.This File will display the Form to Enter the name and Roll Number of the student.
-%\end{description}
+\item Save \textbf{calc.html} in a folder called \textbf{templates}.
+%\textbf{ Python Connector from Browser to Database}:
 
-%\begin{description}
-\item Type the following code in a file called \textbf{message.html}.  The purpose of this file is to display status messages.
-\lstinputlisting[language=HTML]{./codes/message.html}
-%Save this file with message.html. 
-%\end{description}
-\item Save both the html files in a folder called \textbf{templates}.
-\end{enumerate}
-\subsection{Python Connector from Browser to Database}
-\begin{enumerate}
-\item Type the following code in a file called \textbf{store.py}.
-\lstinputlisting[language=Python]{./codes/store.py}
-%Save this file with store.py.This file act as a connection between the web page Student.html and the Database.This will help in storing the Data in database.
-%\end{description}
+\item Type the following code in a file called \textbf{calc\_ui.py}.
+
 \item Make sure that the python file is outside the \textbf{templates} directory.  Now type
 \begin{lstlisting}
-python store.py
+python calc_ui.py
 \end{lstlisting}
 on the terminal. An address will be displayed on the terminal.
-\item Enter the above address in a browser.  Fill the name and roll number and hit submit.
+\item Enter the above address in a browser.  You should see the calculator UI.
 %\item As soon as you hit the submit buttom message will be displayed Data has been stored.
 \end{enumerate}
 
