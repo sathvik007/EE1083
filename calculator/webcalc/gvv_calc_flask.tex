@@ -316,21 +316,18 @@ Create a calculator UI and view it on a browser.
 \\
 \solution
 \begin{lstlisting}
-python calc_ui.py
+https://raw.githubusercontent.com/gadepall/EE1083/master/calculator/webcalc/codes/templates/calc.html
 \end{lstlisting}
-
-
 
 \item Save \textbf{calc.html} in a folder called \textbf{templates}.
 %\textbf{ Python Connector from Browser to Database}:
 
-\item Type the following code in a file called \textbf{calc\_ui.py}.
-
-\item Make sure that the python file is outside the \textbf{templates} directory.  Now type
-\begin{lstlisting}
-python calc_ui.py
-\end{lstlisting}
-on the terminal. An address will be displayed on the terminal.
+\item Type the following code in a file called \textbf{calc\_ui.py} and 
+execute it.  Make sure that the python file is outside the 
+\textbf{templates} directory.  What do you observe?
+\lstinputlisting[language=Python]{./codes/calc_ui.py}
+\solution
+An address will be displayed on the terminal.
 \item Enter the above address in a browser.  You should see the calculator UI.
 %\item As soon as you hit the submit buttom message will be displayed Data has been stored.
 \end{enumerate}
@@ -355,6 +352,12 @@ two numbers using Problem \ref{item:cat}
 \item Extend \ref{item:binop} for the operations that one would do using
 a simple calculator.
 \item Build a calculator using Python-Flask.
+\\
+\solution Download
+\begin{lstlisting}
+svn checkout https://github.com/gadepall/EE1083/trunk/calculator/webcalc/codes
+\end{lstlisting}
+and execute \textbf{calc\_exec.py}
 \end{enumerate}
 
 
