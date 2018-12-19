@@ -37,7 +37,6 @@
 \usepackage{iithtlc}
 %\usepackage[framemethod=tikz]{mdframed}
 \usepackage{listings}
-\usepackage{listings}
     \usepackage[latin1]{inputenc}                                 %%
     \usepackage{color}                                            %%
     \usepackage{array}                                            %%
@@ -327,6 +326,25 @@ python calc_ui.py
 on the terminal. An address will be displayed on the terminal.
 \item Enter the above address in a browser.  You should see the calculator UI.
 %\item As soon as you hit the submit buttom message will be displayed Data has been stored.
+\end{enumerate}
+
+\section{Python Engine}
+
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
+\item Write a program to concatenate 2 strings.
+\\
+\solution
+\lstinputlisting[language=Python]{./codes/p1.py}
+
+\item Write a program to concatenate 3 strings.
+\label{item:cat}
+\item Use the \textbf{eval} function in python to add, subtract, multiply and divide
+two numbers using Problem \ref{item:cat}
+\\
+\solution
+\lstinputlisting[language=Python]{./codes/add_eval.py}
+
 \end{enumerate}
 
 \subsection{Fetching the stored Data from the Database}
