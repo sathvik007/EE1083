@@ -202,7 +202,8 @@ Calculator using Python-Flask
 % was not built to handle multiple paragraphs
 %
 
-\author{G V V Sharma$^{*}$% <-this % stops a space
+\author{Saurabh Vankalas Dattaray, Diparna Bose and  G V V Sharma$^{*}$% 
+%<-this % stops a space
 \thanks{*GVV Sharma is with the Department
 of Electrical Engineering, Indian Institute of Technology, Hyderabad
 502285 India e-mail:  gadepall@iith.ac.in. All content in this manual is released under GNU GPL.  Free and open source.}% <-this % stops a space
@@ -311,8 +312,14 @@ sudo pip install flask
 
 %\begin{description}
 \item {Calculator UI in HTML}:
-Download the following code  and open it using a browser.  You 
-will see the calculator UI.
+Create a calculator UI and view it on a browser.
+\\
+\solution
+\begin{lstlisting}
+python calc_ui.py
+\end{lstlisting}
+
+
 
 \item Save \textbf{calc.html} in a folder called \textbf{templates}.
 %\textbf{ Python Connector from Browser to Database}:
@@ -341,70 +348,15 @@ on the terminal. An address will be displayed on the terminal.
 \label{item:cat}
 \item Use the \textbf{eval} function in python to add, subtract, multiply and divide
 two numbers using Problem \ref{item:cat}
+\label{item:binop}
 \\
 \solution
 \lstinputlisting[language=Python]{./codes/add_eval.py}
-
+\item Extend \ref{item:binop} for the operations that one would do using
+a simple calculator.
+\item Build a calculator using Python-Flask.
 \end{enumerate}
 
-\subsection{Fetching the stored Data from the Database}
-\begin{enumerate}
-%\item Now we want to fetch the data that has been stored into the database.In order to this we will make one more HTML file(display.html).This file will Help to display the fetched data in a way that we want.
-%\item 
-%\begin{description}
-\item Save the following code in a file called \textbf{display.html}.
-\lstinputlisting[language=HTML]{./codes/display.html}
-%\end{description}
-
-\item %Make a python file that connect database and fetch all the Value from the particular table.
-Save the following code in a file titled  \textbf{display.py}.    
-%\begin{description}
-\item \lstinputlisting[language=Python]{./codes/display.py}
-%\end{description}
-
-\item Now open the terminal and type 
-\begin{lstlisting}
-python display.py
-\end{lstlisting}
-An address will be displayed.
-\item Open this address in a browser. You can see all the Name and Roll No entries in the database.
-\end{enumerate}
-\subsection{Updating the Database}
-\begin{enumerate}
-\item 
-%Now we will create one more python file and Html file in order to update the already stored data.
-    
-%\begin{description}
-\item Save the following code in a file with titled \textbf{show.html}.
-\lstinputlisting[language=HTML]{./codes/show.html}
-
-%\end{description}
-\item Save the following code in a file titled \textbf{update.py}.
-%begin{description}
-\item \lstinputlisting[language=Python]{./codes/update.py}
-%\end{description}
-\item Now open the terminal and run the \textbf{update.py} file.
-\item Update whatever data you wish to and click the Update button.
-\item Run \textbf{display.py} to verify that your data is indeed updated.
-%Here now you can update whatever you want to update. Just change the thing and click on update button. Data will be updated.
-\end{enumerate}
-\subsection{Linking all modules to create the Database application}
-\begin{enumerate}
-%\item Now we combine all the code in one file and will link them with each other.we will make onehtml file output.html and main python file that is app.py.
-%\item For html file write below code:-
-%\begin{description}
-\item Save the following code in a file called \textbf{output.html}.
-
-\lstinputlisting[language=HTML]{./codes/output.html}
-%\end{description}
-\item Save the following code in a file titled \textbf{app.py}
-%\begin{description}
-\lstinputlisting[language=Python]{./codes/app.py}
-%\end{description}
-\item Run \textbf{app.py}
-\item Start using your application.
-\item Modify your application so that you may delete a record.
-\end{enumerate}
 
 
 %\input{./chapters/chapter1}

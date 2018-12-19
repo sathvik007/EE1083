@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.30)  18 DEC 2018 12:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.1)  19 DEC 2018 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **gvv_calc_flask.tex
 (./gvv_calc_flask.tex
 LaTeX2e <2018-04-01> patch level 2
-Babel <3.18> and hyphenation patterns for 3 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 85 language(s) loaded.
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/IEEEtran/IE
 EEtran.cls
@@ -623,35 +623,35 @@ Package caption Info: End \AtBeginDocument code.
 \c@rem=\count144
 File: iith_logo.eps Graphic file (type eps)
  <iith_logo.eps>
-LaTeX Font Info:    Calculating math sizes for size <24> on input line 255.
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 255.
+LaTeX Font Info:    Calculating math sizes for size <24> on input line 256.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 256.
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ur
 sfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 255.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 256.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
 mia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 255.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 256.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
 sya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 255.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 256.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
 syb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 255.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 256.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
@@ -660,7 +660,7 @@ File: utxsyc.fd 2000/12/15 v3.1
 )
 File: tlc.eps Graphic file (type eps)
  <tlc.eps>
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 255.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 256.
 File: iith_logo.eps Graphic file (type eps)
  <iith_logo.eps>
 File: tlc.eps Graphic file (type eps)
@@ -674,7 +674,7 @@ File: tlc.eps Graphic file (type eps)
 \openout3 = `gvv_calc_flask.toc'.
 
 
-Underfull \hbox (badness 1721) in paragraph at lines 320--321
+Underfull \hbox (badness 1721) in paragraph at lines 321--322
 []\OT1/txr/m/n/12 Type the fol-low-ing code in a file called
  []
 
@@ -691,39 +691,17 @@ File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 6.
-) (./codes/add_eval.py)
-(/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/listings/ls
-tlang1.sty
-File: lstlang1.sty 2018/09/02 1.7 listings language file
-)
-(/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/listings/ls
-tmisc.sty
-File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-) (./codes/display.html
-LaTeX Font Info:    Try loading font information for OML+txr on input line 1.
-
-(/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/oml
-txr.fd
-File: omltxr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `OML/txr/m/n' in size <12> not available
-(Font)              Font shape `OML/txmi/m/it' tried instead on input line 1.
- [1
+) (./codes/add_eval.py) [1
 
 
-]) (./codes/display.py) (./codes/show.html) (./codes/update.py
-[2]) (./codes/output.html) (./codes/app.py [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-) [4]
-(./gvv_calc_flask.aux) ) 
+] (./gvv_calc_flask.aux) ) 
 Here is how much of TeX's memory you used:
- 8130 strings out of 494591
- 122603 string characters out of 6176027
- 587752 words of memory out of 5000000
- 11611 multiletter control sequences out of 15000+600000
+ 7838 strings out of 492645
+ 118908 string characters out of 6118921
+ 429559 words of memory out of 5000000
+ 11592 multiletter control sequences out of 15000+600000
  67844 words of font info for 167 fonts, out of 8000000 for 9000
- 17 hyphenation exceptions out of 8191
- 36i,7n,52p,232b,1956s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 1144 hyphenation exceptions out of 8191
+ 36i,7n,43p,232b,1778s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_calc_flask.dvi (4 pages, 69288 bytes).
+Output written on gvv_calc_flask.dvi (1 page, 12032 bytes).
